@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .media-item {
+            margin-bottom: 15px;
+        }
+        .media-item img, .media-item video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Talkint</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Perfil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="timeline.html">Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="my-4">Perfil de Usuario</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="img/imagen2.jpg" alt="Imagen de Perfil" class="img-thumbnail">
+                <h5>perrogordito200</h5>
+                <p>Soy un perro guau guau</p>
+                <p>Seguidores: 100</p>
+                <p>Seguidos: 150</p>
+            </div>
+            <div class="col-md-8">
+                <div class="media-item">
+                    <img src="img/fondo3.jpg" alt="Imagen 1"><br><br>
+                    <p>Likes: 10 <button class="btn btn-primary btn-sm">Like 👍🏻</button></p>
+                </div>
+                <div class="media-item">
+                    <video controls>
+                        <source src="videos/DUKI - Goteo (Video Oficial).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video><br><br>
+                    <p>Likes: 20 <button class="btn btn-primary btn-sm">Like</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

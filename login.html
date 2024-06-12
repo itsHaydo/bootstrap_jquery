@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('img/fondo1.jpg'); /* Fondo inicial */
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-image 2s ease; /* Transición de 2 segundos */
+        }
+        .login-container {
+            max-width: 350px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+            border: 1px solid #ddd;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .login-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .login-container form {
+            width: 100%;
+        }
+        .login-container img {
+            width: 175px;
+            margin-bottom: 20px;
+        }
+        .login-container .form-group {
+            margin-bottom: 10px;
+        }
+        .login-container .form-check {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <img src="img/logo.jpg" alt="Logo">
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group form-check text-left">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Recordar usuario</label>
+                </div>
+                <button type="button" class="btn btn-primary btn-block" id="loginBtn">Entrar</button>
+                <a href="#" class="d-block mt-2">Recuperar contraseña</a>
+                <a href="register.html" class="d-block mt-2">Registrarse</a>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            let backgrounds = ['img/fondo1.jpg', 'img/fondo2.jpg', 'img/fondo3.jpg', 'img/fondo4.jpg'];
+            let index = 0;
+
+            function changeBackground() {
+                $('body').css('background-image', 'url(' + backgrounds[index] + ')');
+                index = (index + 1) % backgrounds.length; // Avanzar al siguiente fondo circularmente
+                setTimeout(changeBackground, 3500); // Cambiar cada 5 segundos
+            }
+
+            changeBackground(); // Iniciar cambio de fondo
+
+            $("#loginBtn").click(function(){
+                let username = $("#username").val();
+                let password = $("#password").val();
+                if(username === "" || password === ""){
+                    alert("Faltan datos por ingresar");
+                } else if(username === "demo" && password === "demo"){
+                    window.location.href = "timeline.html";
+                } else {
+                    alert("Usuario o contraseña incorrectos");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
